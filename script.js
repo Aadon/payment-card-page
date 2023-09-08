@@ -47,8 +47,6 @@ cardHolder.addEventListener('input', () => {
       document.getElementById("expiry-year").value;
   });
 
-
-
 const cvvMouseEnter = document.querySelector(".cvv");
 cvvMouseEnter.addEventListener("mouseenter", () => {
   document.querySelector(".front").style.transform =
@@ -71,8 +69,8 @@ cvvInput.addEventListener("input", (e) => {
 });
 
 
-const form = document.querySelector('form');
-form.addEventListener("submit", (e) => {
+const submitBtn = document.querySelector('.btn');
+submitBtn.addEventListener("submit", (e) => {
   e.preventDefault();
   
 });
