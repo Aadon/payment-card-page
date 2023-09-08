@@ -1,26 +1,3 @@
-// const cardNumber = document.querySelectorAll(".card-digits");
-
-// cardNumber.forEach((fourDigits, index) => {
-//   fourDigits.addEventListener("input", (e) => {
-//     let value = e.target.value.replace(/\D/g, "");
-
-//     if (value > 16) {
-//       value = value.slice(0, 16)
-//     }
-//     const inputValues = Array.from(cardNumber).map(input => 
-//       input.value
-//     );
-//     document.querySelector(".cc-number").textContent = inputValues.join("");
-//     if (value.length > 4) {
-//       value = value.slice(0, 4);
-//     }
-//     e.target.value = value;
-//     if (value.length === 4 && index < cardNumber.length - 1) {
-//       cardNumber[index + 1].focus();
-//     }
-//   });
-// });
-// const updateCardNumber = () => {
   const cardNumber = document.querySelectorAll(".card-digits");
   cardNumber.forEach((fourDigits, index) => {
     fourDigits.addEventListener("input", (e) => {
@@ -46,8 +23,7 @@
       }
     });
   });
-// };
-// const cardHolderName = () => {
+
 const cardHolder = document.querySelector('.card-holder');
 cardHolder.addEventListener('input', () => {
   const inputName = document.querySelector(".card-holder").value;
@@ -58,8 +34,7 @@ cardHolder.addEventListener('input', () => {
   }
   
 });
-// };
-// const expiryDetails = () => {
+
   const cardExpiryMonth = document.getElementById("expiry-month");
   cardExpiryMonth.addEventListener("input", () => {
     document.querySelector(".exp-month").textContent =
@@ -71,9 +46,9 @@ cardHolder.addEventListener('input', () => {
     document.querySelector(".exp-year").textContent =
       document.getElementById("expiry-year").value;
   });
-// }
 
-// const cvvValidation = () => {
+
+
 const cvvMouseEnter = document.querySelector(".cvv");
 cvvMouseEnter.addEventListener("mouseenter", () => {
   document.querySelector(".front").style.transform =
@@ -94,11 +69,11 @@ cvvInput.addEventListener("input", (e) => {
   value = value.replace(/\D/g, "");
   document.querySelector(".back-cvv").textContent = document.querySelector(".cvv").value
 });
-// }
+
 
 const form = document.querySelector('form');
 form.addEventListener("submit", (e) => {
-  // e.preventDefault();
+  e.preventDefault();
   
 });
 
